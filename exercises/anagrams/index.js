@@ -8,6 +8,22 @@
 //   anagrams('RAIL! SAFETY!', 'fairy tales') --> True
 //   anagrams('Hi there', 'Bye there') --> False
 
-function anagrams(stringA, stringB) {}
+function anagrams(stringA, stringB) {
+	const map = new Map();
+
+	if (stringA.length !== stringB.length) return false;
+
+	for (let i = 0; i < stringA.length; i++) {
+		if (!map.get(stringA[i])) {
+			map.set(stringA[i], { val: 1 });
+		}
+	}
+	for (let i = 0; i < stringB.length; i++) {
+		if (!map.get(stringB[i])) {
+			return false;
+		}
+	}
+	return true;
+}
 
 module.exports = anagrams;

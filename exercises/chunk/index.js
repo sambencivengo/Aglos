@@ -16,10 +16,11 @@ function chunk(array = [], size) {
 	// start at first index, slice the given size
 	// move to the index after the slice
 	for (let i = 0; i < array.length; i += size) {
+		// size 2
+		// END is always (START + SIZE)
 		result.push(array.slice(i, i + size));
 	}
 	return result;
 }
-// function chunk(array = [], size) {}
 
 module.exports = chunk;
