@@ -15,20 +15,11 @@ function chunk(array = [], size) {
 
 	// start at first index, slice the given size
 	// move to the index after the slice
-	for (let i = 0; i <= array.length; i += size) {
-		const start = i;
-		const end = i + size;
-		// size 2
-		// END is always (START + SIZE)
-		// START increments by SIZE to prevent repeats
-		// V  V
-		// 0, 1, 2, 3, 4,
-		//       V  V
-		// 0, 1, 2, 3, 4,
-		const chunk = array.slice(start, end);
-		chunk.length ? result.push(chunk) : null;
+	for (let i = 0; i < array.length; i += size) {
+		result.push(array.slice(i, i + size));
 	}
 	return result;
 }
+// function chunk(array = [], size) {}
 
 module.exports = chunk;
