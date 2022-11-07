@@ -37,7 +37,6 @@ function steps(n) {
 				stair += ' ';
 			}
 		}
-		console.log({ stair });
 		console.log(stair);
 	}
 }
