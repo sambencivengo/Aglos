@@ -9,25 +9,22 @@
 
 function vowels(str = '') {
 	const map = {
-		a: 1,
-		e: 1,
-		i: 1,
-		o: 1,
-		u: 1,
+		a: 0,
+		e: 0,
+		i: 0,
+		o: 0,
+		u: 0,
 	};
 
 	str.toLowerCase()
 		.split('')
 		.forEach((char) => {
-			if (map[char]) {
+			if (map.hasOwnProperty(char)) {
+				// or (KEY in OBJECT)
 				map[char]++;
-			} else {
-				map[char] = 0;
 			}
 		});
-	console.log(map);
-	const val = Object.values(map).reduce((a, b) => a + b);
-	return val - 5;
+	return Object.values(map).reduce((a, b) => a + b);
 }
 
 module.exports = vowels;
