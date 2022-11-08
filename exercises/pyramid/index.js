@@ -14,6 +14,20 @@
 //       ' ### '
 //       '#####'
 
-function pyramid(n) {}
+function pyramid(n) {
+	// 2 loops like the steps, rows & columns
+	// amount of columns in each row is (n * 2) - 1
+	for (let row = 0; row < n; row++) {
+		let level = '';
+		for (let col = 0; col <= n; col++) {
+			const midPoint = Math.ceil(n / 2);
+			console.log(midPoint, n);
+			if (condition) {
+			} else {
+			}
+		}
+		console.log(string, n);
+	}
+}
 
 module.exports = pyramid;
